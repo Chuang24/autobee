@@ -12,11 +12,11 @@ def convertoStr(input_seq,seperator):
 def createScriptCisco(name,number,email,ID,serialN):
     
     all_lines=[]
-    all_lines.append("document.getElementById(ContactId).value='"+ ID +"';\n")
-    all_lines.append("document.getElementById(ContactName).value='"+ name +"';\n")
-    all_lines.append("document.getElementById(ContactPhoneNumber).value='"+ number +"';\n")
-    all_lines.append("document.getElementById(EmailAddress).value='"+ email +"';\n")
-    all_lines.append("document.getElementById(SerialNumber).value='"+ serialN +"';\n")
+    all_lines.append("document.getElementById('ContactId').value='"+ ID +"';\n")
+    all_lines.append("document.getElementById('ContactName').value='"+ name +"';\n")
+    all_lines.append("document.getElementById('ContactPhoneNumber').value='"+ number +"';\n")
+    all_lines.append("document.getElementById('EmailAddress').value='"+ email +"';\n")
+    all_lines.append("document.getElementById('SerialNumber').value='"+ serialN +"';\n")
     return (convertoStr(all_lines,""))
 
 def createScriptZendesk(id,name,number,email,serialN):   
@@ -27,10 +27,10 @@ def createScriptZendesk(id,name,number,email,serialN):
     id1=str(id+1)
     id2=str(id+2)
     id=str(id)
-    all_lines.append("document.getElementById(" + id13  + "val-field_1.3.4--input).value='"+ name +"';\n")
-    all_lines.append("document.getElementById(" + id + "val-field_1.3.4--input).value='"+ number +"';\n")
-    all_lines.append("document.getElementById(" + id1  + "val-field_1.3.4--input).value='"+ email +"';\n")
-    all_lines.append("document.getElementById(" + id2  + "val-field_1.3.4--input).value='"+ serialN +"';\n")
+    all_lines.append("document.getElementById('" + id13  + "val-field_1.3.4--input').value='"+ name +"';\n")
+    all_lines.append("document.getElementById('" + id + "val-field_1.3.4--input').value='"+ number +"';\n")
+    all_lines.append("document.getElementById('" + id1  + "val-field_1.3.4--input').value='"+ email +"';\n")
+    all_lines.append("document.getElementById('" + id2  + "val-field_1.3.4--input').value='"+ serialN +"';\n")
     # all_lines.append("document.getElementById(1790val-field_1.3.4--input).value='"+ name +"';\n")
     # all_lines.append("document.getElementById(1777val-field_1.3.4--input).value='"+ number +"';\n")
     # all_lines.append("document.getElementById(1778val-field_1.3.4--input).value='"+ email +"';\n")
