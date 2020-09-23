@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>AutoBee for CS support</title>
+    <head>
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <div class ="container">
+            <h1>Collecting Cx's information</h1>
+            <h3>Please enter all the fields below to populate javascript for Zendesk and Cisco</h3>
+            <form action="{{url_for('success')}}" method ="POST">
+                    
+                    <input title="Your email will be safe with us " placeholder="Enter zendesk phone number id" type ="number" name="id" required> <br>
+                    <input title="Your email will be safe with us " placeholder="Enter cx's name" type ="text" name="cx_name" required> <br>
+                    <input title="Your email will be safe with us " placeholder="Enter cx's phone number" type ="number" name="cx_pNumber" required> <br>
+                    <input title="Your email will be safe with us " placeholder="Enter cx's Email" type ="email" name="cx_email" required> <br>
+                    <input title="Your email will be safe with us " placeholder="Enter cx's serial number" type ="number" name="cx_sNumber" required> <br>
+                    <input title="Your email will be safe with us " placeholder="Enter cx's ticket ID" type ="number" name="cx_ticketID" required> <br>
+                    <button type="submit"> Submit</button>
+
+            </form>
+        </div>
+    </body>
+</html>
