@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow-y: auto;
   }
   
   .container {
@@ -9,7 +10,7 @@ html, body {
     height: 100%;
     background-color: #006666;
     color: #e6ffff;
-    overflow:hidden;
+    /* overflow:hidden; */
     text-align: center;
   }
   
