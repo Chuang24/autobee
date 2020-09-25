@@ -23,7 +23,7 @@ def createScriptZendesk(id,name,number,email,serialN):
     of=os.path.splitext('Zendesk')[0]+'.txt'
     all_lines=[]
     id=int(id)
-    id13=str(id+13)
+    id13=str(id+14) # changed the number because of the change in zendesk
     id1=str(id+1)
     id2=str(id+2)
     id=str(id)

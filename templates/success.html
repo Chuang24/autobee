@@ -12,26 +12,51 @@
             Please see Javascript below.
             </p>
 
-            <form >
+           
                 <label for="w3review">Zendesk Javascript:</label>
-                <textarea id="w3review" name="w3review" rows="10" cols="100">
+                <textarea id="zendeskid" name="w3review" rows="10" cols="100">
 {{ zendesk }}
                   </textarea>
                   <br><br>
+                  <button onclick="copyFunctionZendesk()">Copy</button>   
+
+
+                  <br><br>
                 <label for="w3review">Cisco Javascript:</label>
-                <textarea id="w3review" name="w3review" rows="10" cols="100">
+                <textarea id="ciscoid" name="w3review" rows="10" cols="100">
 {{ cisco }}   
                   </textarea>
                   <br><br>
+                  <button onclick="copyFunctionCisco()">Copy</button> 
+                  <br><br>
 
                   <a href=button_goback> <button type="button"> Go back</button></a>
-            </form> 
+           
                 
 
 
-
+ 
         </div>
         
+        <script>
+            function copyFunctionZendesk(){
+                var copyText=document.getElementById("zendeskid");
+                copyText.select();
+                copyText.setSelectionRange(0,99999)
+                document.execCommand("copy");
+                alert("Copied the zendesk javascript");
+                
+            }
+            
+            function copyFunctionCisco(){
+                var copyText=document.getElementById("ciscoid");
+                copyText.select();
+                copyText.setSelectionRange(0,99999);
+                document.execCommand("copy");
+                alert("Copied the cisco javascript");
+            }
+
+        </script>
 
     </body>
 </html>
