@@ -16,16 +16,16 @@ html, body {
   
   .container h1 {
     font-family: Arial, sans-serif;
-    font-size: 10px;
+    font-size: 20px;
     color: #DDCCEE;
-    margin-top: 10px;
+    margin: 0 auto;
   }
 
   .container h2 {
     font-family: Arial;
     font-size: 40px;
     color: #DDCCEE;
-    margin-top: 10px;
+    margin: 0 auto;
     
   }
   
