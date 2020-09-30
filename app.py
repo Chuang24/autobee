@@ -1,5 +1,7 @@
 from flask import Flask, render_template , request
 from generate import generate, createScriptZendesk,createScriptCisco
+import phone_number 
+from phone_number import getTimeZone,getAreaName,getLocalTime
 app=Flask(__name__)
 
 @app.route("/")
@@ -17,14 +19,19 @@ def success():
         ticketID=request.form["cx_ticketID"]
         
         generate(name,pNumber,email,ticketID,sNumber)
+    
         zendeskScript=createScriptZendesk(id,name,pNumber,email,sNumber)
         ciscoScript=createScriptCisco(name,pNumber,email,ticketID,sNumber)
-
-        return render_template("success.html",zendesk=zendeskScript, cisco=ciscoScript) 
+        areaName = getAreaName(pNumber)
+        timeZone = getTimeZone(pNumber)
+        localTime=getLocalTime(timeZone)
+        
+        return render_template("success.html",zendesk=zendeskScript, cisco=ciscoScript, areaName=areaName, timeZone=timeZone, localTime=localTime) 
       
 @app.route('/button_goback')
 def button_goback():
     return render_template("index.html")
+
 
 if __name__ == "__main__":
     app.debug =True
